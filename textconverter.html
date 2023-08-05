@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Speech Converter </title>
+</head>
+<body>
+    
+    </div>
+    <div class="container">
+        <textarea class="textbox" placeholder="Enter the text to convert to speech"></textarea>
+        <button class="button">speak the text</button>
+    </div>
+    <script>
+        button=document.querySelector("button");
+        text=document.querySelector("textarea");
+        button.addEventListener("click",() => {
+            let utterance=new SpeechSynthesisUtterance(text.value);
+            speechSynthesis.speak(utterance);
+        });
+    </script>
+    <style>
+        html,body{
+            display: center;
+            justify-content: center;
+            background-image: url("https://www.ee.sun.ac.za/wp-content/uploads/2022/12/banner-image-848x548.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+    
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .textbox{
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-color: rgb(28, 75, 83);
+            overflow-y: auto;
+            height: 4.5em;
+            resize: none;
+            background-color: rgb(34, 80, 195);
+            font-size: 16px;
+            color: white;
+        
+        }
+        .textbox:hover{
+            border-color: #e05e18;
+            border-width: 5px;
+        }
+        .button{
+            padding: 10px 20px;
+            background-color: #3dae17;
+            color: white ;
+            border-radius: 10px;
+            border-color: rgb(202, 130, 95);
+            shape-outside: margin-box;
+            cursor: pointer;
+            height: 60px;
+            border-width: 5px;
+        }
+        .button:active{
+            background-color: #d2ac11;
+        }
+        .button:hover{
+            box-shadow: rgb(from color 200 200 200);
+        }
+    </style>
+</body>
+</html>
